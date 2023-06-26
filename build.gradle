@@ -23,9 +23,8 @@ java {
 }
 
 dependencies {
-    compileOnly 'com.github.Minestom.Minestom:Minestom:aebf72de90'
-    testImplementation 'com.github.Minestom.Minestom:Minestom:aebf72de90'
-    testImplementation 'com.github.TogAr2:MinestomFluids:b237b13a4b'
+    compileOnly 'com.github.CryptForge:minestom-ce:8a5c610b7b'
+    testImplementation 'com.github.CryptForge:minestom-ce:8a5c610b7b'
 }
 
 publishing {

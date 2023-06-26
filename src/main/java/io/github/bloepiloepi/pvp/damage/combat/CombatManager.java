@@ -235,7 +235,7 @@ public class CombatManager {
 	@SuppressWarnings("UnstableApiUsage")
 	private void onLeaveCombat() {
 		int duration = (int) (getCombatDuration() / MinecraftServer.TICK_MS);
-		player.getPlayerConnection().sendPacket(new EndCombatEventPacket(duration, getKillerId()));
+		player.getPlayerConnection().sendPacket(new EndCombatEventPacket(duration));
 	}
 	
 	public List<CombatEntry> getEntries() {

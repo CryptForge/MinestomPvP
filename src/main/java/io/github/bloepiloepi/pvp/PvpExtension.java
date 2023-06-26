@@ -12,13 +12,12 @@ import net.minestom.server.attribute.AttributeInstance;
 import net.minestom.server.entity.Player;
 import net.minestom.server.event.EventNode;
 import net.minestom.server.event.trait.EntityInstanceEvent;
-import net.minestom.server.extensions.Extension;
 import net.minestom.server.item.Material;
 import net.minestom.server.registry.Registry;
 
 import java.lang.reflect.Field;
 
-public class PvpExtension extends Extension {
+public class PvpExtension {
 	
 	public static EventNode<EntityInstanceEvent> events() {
 		return PvPConfig.DEFAULT.createNode();
@@ -45,17 +44,6 @@ public class PvpExtension extends Extension {
 			speed.setBaseValue(speed.getAttribute().defaultValue());
 			damage.setBaseValue(damage.getAttribute().defaultValue());
 		}
-	}
-	
-	@Override
-	public void initialize() {
-		init();
-		
-		getEventNode().addChild(events());
-	}
-	
-	@Override
-	public void terminate() {
 	}
 	
 	/**
