@@ -308,11 +308,6 @@ public class AttackManager {
                                        boolean critical, boolean sprintAttack) {
         if (!strongAttack || critical || sprintAttack || !attacker.isOnGround()) return false;
 
-        Pos previousPosition = EntityUtils.getPreviousPosition(attacker);
-        if (previousPosition == null) return false;
-        double lastMoveDistance = previousPosition.distance(attacker.getPosition()) * 0.6;
-        if (lastMoveDistance >= attacker.getAttributeValue(Attribute.MOVEMENT_SPEED)) return false;
-
         Tool tool = Tool.fromMaterial(attacker.getItemInMainHand().material());
         return tool != null && tool.isSword();
     }

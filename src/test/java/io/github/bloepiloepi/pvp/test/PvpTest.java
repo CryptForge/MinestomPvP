@@ -26,6 +26,7 @@ import net.minestom.server.event.player.PlayerUseItemOnBlockEvent;
 import net.minestom.server.extras.lan.OpenToLAN;
 import net.minestom.server.instance.Instance;
 import net.minestom.server.instance.block.Block;
+import net.minestom.server.item.ItemStack;
 import net.minestom.server.item.Material;
 import net.minestom.server.potion.Potion;
 import net.minestom.server.potion.PotionEffect;
@@ -94,6 +95,7 @@ public class PvpTest {
 
             event.getPlayer().setPermissionLevel(4);
             event.getPlayer().addEffect(new Potion(PotionEffect.REGENERATION, (byte) 10, CustomPotionEffect.PERMANENT));
+            event.getPlayer().getInventory().addItemStack(ItemStack.of(Material.IRON_SWORD));
         });
 
 //		LegacyKnockbackSettings settings = LegacyKnockbackSettings.builder()
